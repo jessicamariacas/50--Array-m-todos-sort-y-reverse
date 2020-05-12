@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jessica Maria</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var sueldos = [];
+        var valor;
+        do {
+            valor = prompt('Introduzca sueldo (0 para finalizar)');
+            valor = parseInt(valor);
+            if (valor != 0)
+                sueldos.push(valor);
+        } while (valor != 0);
+
+        sueldos.sort(function (x, y) {
+            if (x > y)
+                return 1;
+            else
+                return -1;
+        });
+
+        document.write('Estos sueldos estan ordenados de menor a mayor<br><br>');
+        var j;
+        for (j = 0; j < sueldos.length; j++) {
+            document.write(sueldos[j] + '<br>');
+        }
+        sueldos.reverse();
+        document.write('Estos sueldos estan ordenados de mayor a menor<br><br>');
+        for (j = 0; j < sueldos.length; j++) {
+            document.write(sueldos[j] + '<br>');
+        }
+    </script>
+
+</body>
+
+</html>
